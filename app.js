@@ -310,6 +310,13 @@ function renderGame() {
         <div class="game-hero-art"><img src="assets/images/override-logo.jpg" alt="VEX V5 Robotics Competition Override"></div>
       </section>
 
+      <div class="panel video-panel">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/68NxYIAzbkY?si=AsBlzY7C0NYf6T9s" title="Video giới thiệu VEX V5 Robotics Competition Override" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-copy"><div class="eyebrow">Video giới thiệu</div><h2 style="margin-top:8px">Xem Override vận hành</h2><p>Quan sát cách Pins, Cups, Goals, Toggles và Midfield kết hợp trong một trận đấu trước khi đọc phần tóm tắt luật bên dưới.</p></div>
+      </div>
+
       <div class="section-head"><div><div class="eyebrow">Cách ghi điểm</div><h2>Bốn nguồn điểm chính</h2><p>Điểm được xác định sau khi trận đấu kết thúc và các vật thể đã dừng.</p></div></div>
       <div class="score-strip">
         <div class="score-tile"><b>12</b><span>điểm Autonomous Bonus cho liên minh thắng giai đoạn tự hành</span></div>
