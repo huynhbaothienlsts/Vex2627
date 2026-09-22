@@ -296,6 +296,53 @@ function renderRubric() {
   <div class="section-head"><div><h2>Hướng dẫn sử dụng</h2></div></div><div class="panel form-panel"><p><b>Minh chứng ưu tiên:</b> quan sát robot, giải thích trực tiếp của học sinh, dữ liệu thử nghiệm và sự liên hệ với Engineering Notebook. Không chấm cao chỉ vì robot đẹp hoặc phức tạp.</p><p><b>Robot Inspection:</b> là điều kiện hợp lệ riêng, không cộng vào 20 điểm thiết kế. Đội chưa PASS cần hoàn tất thay đổi trước khi được chạy Skills.</p><p><b>Nguyên tắc:</b> nếu minh chứng nằm giữa hai mức, chọn mức thấp hơn và ghi điều còn thiếu trong phần nhận xét.</p></div></div>`;
 }
 
+function renderGame() {
+  document.getElementById('game').innerHTML = `
+    <div class="game-page">
+      <section class="game-hero">
+        <div class="game-hero-copy">
+          <div class="eyebrow">V5RC 2026–2027</div>
+          <h1>Override</h1>
+          <p>Xếp Pins và Cups lên các Goal, điều khiển Toggles để sở hữu Yellow Pins, rồi đưa robot vào Midfield trước khi trận đấu kết thúc.</p>
+          <div class="game-meta"><span>Game Manual v2.0</span><span>Sân 12 × 12 ft</span><span>2 liên minh · 4 robot</span></div>
+          <a class="official-link" href="https://www.vexrobotics.com/v5/competition" target="_blank" rel="noopener">Xem luật chính thức ↗</a>
+        </div>
+        <div class="game-hero-art"><img src="assets/images/override-logo.jpg" alt="VEX V5 Robotics Competition Override"></div>
+      </section>
+
+      <div class="section-head"><div><div class="eyebrow">Cách ghi điểm</div><h2>Bốn nguồn điểm chính</h2><p>Điểm được xác định sau khi trận đấu kết thúc và các vật thể đã dừng.</p></div></div>
+      <div class="score-strip">
+        <div class="score-tile"><b>12</b><span>điểm Autonomous Bonus cho liên minh thắng giai đoạn tự hành</span></div>
+        <div class="score-tile"><b>5</b><span>điểm cho mỗi Alliance-colored Pin được Scored</span></div>
+        <div class="score-tile"><b>10</b><span>điểm cho mỗi Yellow Pin được liên minh sở hữu</span></div>
+        <div class="score-tile"><b>8</b><span>điểm cho mỗi robot kết thúc trận trong Midfield</span></div>
+      </div>
+
+      <div class="game-intro-grid">
+        <figure class="game-visual-card"><img src="assets/images/field.png" alt="Toàn cảnh sân thi đấu V5RC Override"><figcaption>Sân thi đấu Override với các Goal, Toggles, Loaders và Midfield.</figcaption></figure>
+        <div class="panel game-facts"><div class="eyebrow">Cấu trúc trận đấu</div><h2 style="margin-top:8px">15 giây tự hành, 1 phút 45 giây điều khiển</h2><p>Hai liên minh Đỏ và Xanh, mỗi liên minh gồm hai đội, thi đấu để đạt tổng điểm cao hơn.</p><div class="fact-list"><div class="fact"><b>56</b><span>Cups trên toàn sân</span></div><div class="fact"><b>63</b><span>Pins trên toàn sân</span></div><div class="fact"><b>9</b><span>Goals: 4 Short, 1 Tall và 4 Alliance Goals</span></div><div class="fact"><b>4 + 4</b><span>Toggles và Loaders</span></div></div><div class="source-note">Yellow Pin được 10 điểm cho liên minh sở hữu Toggle trong Quadrant tương ứng. Vì vậy, điều khiển Toggle có thể thay đổi giá trị của nhiều Pin cùng lúc.</div></div>
+      </div>
+
+      <div class="section-head"><div><div class="eyebrow">Luật cần nhớ</div><h2>Những giới hạn ảnh hưởng trực tiếp đến thiết kế</h2></div></div>
+      <div class="rule-grid">
+        <article class="rule-card"><span class="rule-code">SG2 · SG3</span><h3>Giới hạn mở rộng</h3><p>Trong trận, robot không được vượt quá kích thước ngang 24 × 24 inch và chiều cao tổng thể 50 inch, trừ những ngoại lệ được nêu rõ cho Endgame.</p></article>
+        <article class="rule-card"><span class="rule-code">SG5</span><h3>Mỗi robot có một Preload</h3><p>Mỗi robot bắt đầu với một Alliance-colored Pin hợp lệ, tiếp xúc robot cùng màu và không tiếp xúc vật thể hoặc Field Element khác.</p></article>
+        <article class="rule-card"><span class="rule-code">SG6</span><h3>Giới hạn Possession</h3><p>Robot chỉ được Possess tối đa một Pin và một Cup cùng lúc. Khi vượt giới hạn, robot phải ngừng các hành động khác để xử lý vật thể dư.</p></article>
+        <article class="rule-card"><span class="rule-code">SG7</span><h3>Tôn trọng Autonomous Line</h3><p>Trong Autonomous, robot không được tác động lên phần sân, vật thể hoặc Field Element ở phía đối phương của Autonomous Line.</p></article>
+        <article class="rule-card"><span class="rule-code">SG12</span><h3>Endgame thay đổi luật</h3><p>Trong Endgame, robot không được Place Scoring Objects lên Midfield Goal. Tranh chấp Midfield có thể mạnh và robot phải chấp nhận rủi ro tương tác cao hơn.</p></article>
+        <article class="rule-card"><span class="rule-code">SG13</span><h3>Load Zone được bảo vệ</h3><p>Trong Driver Control, robot đang ở Load Zone của liên minh mình được bảo vệ. Đối thủ không được cản trở, chiếm giữ hoặc làm tích tụ vật thể tại Load Zone đó.</p></article>
+      </div>
+
+      <div class="section-head"><div><div class="eyebrow">Robot Skills</div><h2>Những điểm khác với trận đối kháng</h2></div></div>
+      <div class="panel skills-explainer">
+        <img src="assets/images/scoring-elements.png" alt="Cup và Pin của game Override">
+        <div class="skills-copy"><h3>Thi đấu với một robot</h3><p>Robot bắt đầu ở Quadrant cạnh Red Alliance Station; Drive Team ở Red Alliance Station. Match Loads được đưa vào qua Red Alliance Loaders. Robot có thể thêm hoặc lấy Pins và Cups trên tất cả các Goals và di chuyển tự do sau khi trận bắt đầu.</p><p><b>Tính điểm Skills:</b> mỗi Red hoặc Blue Pin hợp lệ được 5 điểm; mỗi Yellow Pin được sở hữu được 10 điểm; robot kết thúc trong Midfield được 8 điểm. Yellow Pins trong Midfield được sở hữu nếu robot kết thúc trận trong Midfield.</p><p>Bản chấm vòng trường lấy điểm tốt nhất của Autonomous Skills và Driver Skills, sau đó chuẩn hóa riêng từng nội dung về tối đa 20 điểm.</p></div>
+      </div>
+
+      <div class="source-note"><b>Lưu ý:</b> Trang này chỉ là bản tóm tắt để học sinh và giám khảo tra cứu nhanh. Game Manual tiếng Anh phiên bản hiện hành và hệ thống Q&amp;A chính thức luôn có giá trị cao hơn nếu có khác biệt.</div>
+    </div>`;
+}
+
 function renderGuide() {
   document.getElementById('guide').innerHTML = `
     <div class="guide-hero">
@@ -408,7 +455,7 @@ function exportJson(){download('vex-override-backup.json',JSON.stringify({export
 function download(name,content,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 function escapeHtml(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 
-function renderAll(){renderOverview();renderJudging();renderSkills();renderRubric();renderGuide()}
+function renderAll(){renderOverview();renderJudging();renderSkills();renderGame();renderRubric();renderGuide()}
 document.addEventListener('click',e=>{const btn=e.target.closest('[data-view]');if(btn)switchView(btn.dataset.view)});
 renderAll();
 document.getElementById('syncConfig').onclick = configureSync;

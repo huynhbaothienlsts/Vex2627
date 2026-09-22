@@ -22,7 +22,8 @@ button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 .topbar { height: 74px; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); display: flex; align-items: center; padding: 0 5vw; position: sticky; top: 0; z-index: 20; gap: 30px; backdrop-filter: blur(12px); }
 .brand { display: flex; align-items: center; gap: 12px; border: 0; background: none; padding: 0; color: var(--ink); text-align: left; }
-.brand-mark { width: 42px; height: 42px; display: grid; place-items: center; background: var(--navy); color: white; font-weight: 900; border-radius: 11px; box-shadow: inset 0 -4px 0 var(--coral); }
+.brand-mark { width: 48px; height: 43px; display: grid; place-items: center; background: white; color: white; font-weight: 900; border-radius: 9px; overflow: hidden; }
+.brand-mark img { width: 46px; height: 40px; object-fit: contain; }
 .brand strong { display: block; font-size: 14px; letter-spacing: .08em; }
 .brand small { display: block; color: var(--muted); margin-top: 2px; }
 nav { display: flex; align-self: stretch; }
@@ -151,6 +152,42 @@ textarea { min-height: 100px; resize: vertical; }
 .connection-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px; }
 .connection-step { background: #f6f8fa; border-radius: 12px; padding: 15px; }
 .connection-step b { display: block; margin-bottom: 5px; }
+.game-page { max-width: 1240px; margin: auto; }
+.game-hero { display: grid; grid-template-columns: 1.05fr .95fr; background: #050609; color: white; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); }
+.game-hero-copy { padding: 46px; align-self: center; }
+.game-hero-copy p { color: #cdd3df; max-width: 620px; }
+.game-hero-art { min-height: 390px; background: #000; }
+.game-hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.game-meta { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.game-meta span { padding: 7px 10px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; color: #e6e9ef; font-size: 12px; }
+.score-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin: 18px 0; }
+.score-tile { background: white; border: 1px solid var(--line); border-radius: 15px; padding: 18px; position: relative; overflow: hidden; }
+.score-tile::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--coral); }
+.score-tile:nth-child(2)::before { background: var(--blue); }
+.score-tile:nth-child(3)::before { background: var(--gold); }
+.score-tile:nth-child(4)::before { background: var(--green); }
+.score-tile b { display: block; font-size: 29px; }
+.score-tile span { color: var(--muted); font-size: 12px; line-height: 1.4; }
+.game-intro-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; margin-top: 18px; }
+.game-visual-card { overflow: hidden; background: white; border: 1px solid var(--line); border-radius: 18px; }
+.game-visual-card img { width: 100%; height: 320px; object-fit: contain; display: block; background: white; }
+.game-visual-card figcaption { padding: 14px 18px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); }
+.game-facts { padding: 24px; }
+.fact-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 17px; }
+.fact { border-radius: 12px; background: #f5f7fa; padding: 14px; }
+.fact b { display: block; font-size: 22px; }
+.fact span { color: var(--muted); font-size: 11px; }
+.rule-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.rule-card { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 19px; }
+.rule-code { display: inline-block; color: var(--coral-dark); background: var(--soft-coral); padding: 4px 7px; border-radius: 7px; font-weight: 900; font-size: 11px; margin-bottom: 10px; }
+.rule-card h3 { margin-bottom: 7px; }
+.rule-card p { margin: 0; font-size: 13px; }
+.skills-explainer { display: grid; grid-template-columns: 250px 1fr; overflow: hidden; margin-top: 18px; }
+.skills-explainer img { width: 100%; height: 100%; min-height: 260px; object-fit: contain; background: #fafafa; padding: 20px; }
+.skills-copy { padding: 26px; }
+.official-link { display: inline-flex; align-items: center; gap: 8px; color: white; background: var(--coral); border-radius: 10px; padding: 11px 15px; text-decoration: none; font-weight: 800; font-size: 13px; margin-top: 12px; }
+.official-link:hover { background: var(--coral-dark); }
+.source-note { margin-top: 18px; background: #edf4fd; color: #2b527c; border-left: 3px solid var(--blue); padding: 14px 16px; border-radius: 0 10px 10px 0; font-size: 12px; line-height: 1.5; }
 
 @media (max-width: 1000px) {
   .topbar { padding: 0 18px; gap: 10px; }
@@ -158,6 +195,9 @@ textarea { min-height: 100px; resize: vertical; }
   nav { margin-left: auto; }
   .nav-btn { padding: 0 9px; font-size: 11px; }
   .hero { grid-template-columns: 1fr; padding: 34px; }
+  .game-hero, .game-intro-grid { grid-template-columns: 1fr; }
+  .score-strip { grid-template-columns: repeat(2,1fr); }
+  .rule-grid { grid-template-columns: repeat(2,1fr); }
   .metric-grid { grid-template-columns: repeat(2,1fr); }
   .connection-steps { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
@@ -173,6 +213,10 @@ textarea { min-height: 100px; resize: vertical; }
   .hero { padding: 26px 22px; border-radius: 18px; }
   .hero-stats, .metric-grid, .skills-layout, .admin-grid, .guide-grid, .do-dont { grid-template-columns: 1fr; }
   .guide-card.wide { grid-column: auto; }
+  .game-hero-copy { padding: 28px 22px; }
+  .game-hero-art { min-height: 240px; }
+  .score-strip, .rule-grid, .fact-list { grid-template-columns: 1fr; }
+  .skills-explainer { grid-template-columns: 1fr; }
   .section-head { align-items: flex-start; flex-direction: column; }
   .attempt-grid { grid-template-columns: 1fr 1fr 1fr; }
   .form-panel { padding: 17px; }
