@@ -115,14 +115,39 @@ textarea { min-height: 100px; resize: vertical; }
 .attempt label { display: block; color: var(--muted); font-size: 11px; font-weight: 750; margin-bottom: 6px; }
 .best-score { margin-top: 16px; padding: 14px; border-radius: 12px; background: #f6f8fa; display: flex; justify-content: space-between; align-items: center; }
 .best-score b { font-size: 24px; }
+.skills-overview { display: grid; grid-template-columns: minmax(360px, 1.05fr) minmax(0, .95fr); gap: 22px; margin-bottom: 24px; }
+.skills-field { margin: 0; background: white; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); }
+.skills-field img { width: 100%; height: 100%; min-height: 440px; object-fit: contain; display: block; background: #f8fafc; }
+.skills-field figcaption { padding: 11px 15px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--line); }
+.skills-summary { background: var(--navy); color: white; border-radius: 18px; padding: 28px; }
+.skills-summary .eyebrow { color: #ffb6ab; }
+.skills-summary p, .skills-summary li { color: #d5dce8; }
+.skills-summary h2 { margin: 8px 0 10px; }
+.skills-score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 18px 0; }
+.skills-score-grid div { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 12px; }
+.skills-score-grid b { display: block; font-size: 24px; color: #ffd36e; }
+.skills-score-grid span { display: block; color: #d5dce8; font-size: 11px; line-height: 1.35; }
+.skills-rules { padding-left: 19px; margin: 16px 0 0; }
+.skills-rules li { margin: 8px 0; line-height: 1.45; font-size: 12px; }
+.skills-summary .source-note { background: rgba(40,120,216,.16); color: #dbeaff; border-left-color: #68aaf5; }
 .rubric-page { max-width: 1100px; margin: auto; }
 .rubric-hero { padding: 32px; background: var(--navy); color: white; border-radius: 20px; margin-bottom: 20px; }
 .rubric-hero p { color: #d5dce8; max-width: 800px; }
+.rubric-jump { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+.rubric-jump a { color: white; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.08); border-radius: 999px; padding: 8px 12px; text-decoration: none; font-weight: 800; font-size: 12px; }
+.rubric-jump a:hover { background: var(--coral); border-color: var(--coral); }
+.rubric-section { scroll-margin-top: 92px; }
+.rubric-block { margin-bottom: 18px; }
+.rubric-block-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; padding: 13px 16px; background: #eef2f7; border-radius: 13px 13px 0 0; }
+.rubric-block-head p { margin: 6px 0 0; font-size: 12px; max-width: 760px; }
+.rubric-block-head > span { white-space: nowrap; color: white; background: var(--navy); border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 850; }
+.rubric-block .rubric-table { border-radius: 0 0 18px 18px; }
 .rubric-table { overflow: hidden; }
 .rubric-table table { min-width: 1000px; }
 .rubric-table td { text-align: left; vertical-align: top; line-height: 1.45; }
 .rubric-table td:first-child { width: 17%; font-weight: 800; }
 .rubric-table th { text-align: left; }
+.interview-table table { min-width: 820px; }
 .level-4 { border-top: 3px solid var(--green); }
 .level-3 { border-top: 3px solid var(--blue); }
 .level-2 { border-top: 3px solid var(--gold); }
@@ -209,6 +234,8 @@ textarea { min-height: 100px; resize: vertical; }
   .grid-2 { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   .rubric-row { grid-template-columns: 1fr; gap: 8px; }
+  .skills-overview { grid-template-columns: 1fr; }
+  .skills-field img { min-height: 0; }
 }
 @media (max-width: 680px) {
   .topbar { height: auto; min-height: 66px; flex-wrap: wrap; padding: 10px 14px 0; }
@@ -225,6 +252,9 @@ textarea { min-height: 100px; resize: vertical; }
   .skills-explainer { grid-template-columns: 1fr; }
   .section-head { align-items: flex-start; flex-direction: column; }
   .attempt-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .skills-score-grid { grid-template-columns: 1fr; }
+  .skills-summary { padding: 22px; }
+  .rubric-block-head { flex-direction: column; }
   .form-panel { padding: 17px; }
   .form-title { flex-direction: column; }
 }

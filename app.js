@@ -18,6 +18,48 @@ const INTERVIEW = [
   ['adapt-ideas', 'Biến ý tưởng bên ngoài thành của đội', 'Ghi nguồn, điều chỉnh cho robot, kiểm thử và hiểu vì sao giải pháp hoạt động.']
 ];
 
+const NOTEBOOK_RUBRIC = [
+  { group: 'Tổ chức Notebook', points: 16, rows: [
+    ['Thông tin dễ tra cứu', 'Không đánh số trang hoặc không có mục lục; không thể xác định vị trí thông tin.', 'Có sắp xếp nội dung ở một mức độ nhất định, nhưng việc tìm kiếm còn khó khăn.', 'Các trang được đánh số và có mục lục, nhưng vẫn mất thời gian để tìm nội dung.', 'Các trang được đánh số; nội dung theo trình tự thời gian hoặc theo mục; mục lục dẫn đến từng nội dung cụ thể.'],
+    ['Có thể xác định người đóng góp', 'Thiếu số hiệu đội hoặc hoàn toàn không ghi rõ người thực hiện.', 'Có số hiệu đội, nhưng rất ít nội dung ghi rõ người thực hiện.', 'Có số hiệu đội; phần lớn nội dung ghi rõ học sinh thực hiện.', 'Có số hiệu đội; mọi nội dung đều có chữ ký hoặc chữ viết tắt của học sinh thực hiện.'],
+    ['Hồ sơ bao quát toàn bộ mùa giải', 'Không ghi ngày tháng, hoặc tất cả dường như được tạo cùng một thời điểm.', 'Chỉ tập trung trong vài giai đoạn ngắn, hoặc thiếu những khoảng dài của mùa giải.', 'Có ngày tháng xuyên suốt mùa giải nhưng còn một số khoảng trống.', 'Có ngày tháng xuyên suốt mùa giải, thể hiện thói quen ghi chép đều đặn.'],
+    ['Nguồn bên ngoài được ghi công', 'Nội dung từ bên ngoài xuất hiện nhưng không được ghi nguồn.', 'Chỉ nêu vài nguồn, hoặc nguồn chỉ được liệt kê riêng.', 'Phần lớn nguồn được ghi tên, nhưng vẫn còn nội dung chưa ghi nguồn.', 'Nguồn tham khảo hoặc được phát triển thêm được ghi tên ngay tại vị trí sử dụng.']
+  ]},
+  { group: 'Quy trình thiết kế kỹ thuật – Xác định vấn đề', points: 12, rows: [
+    ['Tiêu chí và ràng buộc được xác định', 'Không xác định vấn đề và không nêu tiêu chí, ràng buộc.', 'Xác định vấn đề nhưng không có tiêu chí hoặc giới hạn cụ thể.', 'Xác định vấn đề nhưng không giải thích; liệt kê tiêu chí và ràng buộc liên quan.', 'Xác định và giải thích vấn đề; nêu các quy định và ràng buộc có thể ảnh hưởng đến giải pháp.'],
+    ['Chiến thuật thi đấu được ghi lại', 'Không ghi lại chiến thuật.', 'Có đề cập chiến thuật nhưng không giải thích lý do.', 'Mô tả ưu tiên ghi điểm và có một số lập luận, nhưng không ghi các đánh đổi.', 'Mô tả ưu tiên ghi điểm, kèm lập luận và những đánh đổi phát sinh.'],
+    ['Quá trình động não được ghi lại', 'Không có nội dung động não, hoặc chỉ có một giải pháp đã chọn sẵn.', 'Có một hoặc hai ý tưởng nhưng không so sánh.', 'Có từ ba phương án trở lên nhưng không so sánh; hoặc một đến hai ý tưởng có so sánh.', 'Ghi nhiều phương án khác biệt về lập trình, kỹ thuật hoặc chiến thuật, đủ chi tiết để nhận thấy sự khác nhau.']
+  ]},
+  { group: 'Quy trình thiết kế kỹ thuật – Phát triển giải pháp', points: 16, rows: [
+    ['Nguyên mẫu được ghi lại', 'Không ghi lại quá trình tạo nguyên mẫu.', 'Chỉ có một sản phẩm lắp ráp, hầu như không cho thấy các bước trước đó.', 'Có từ hai lần thử nghiệm một giải pháp trở lên và có mối liên hệ giữa các lần thử.', 'Có quá trình tạo nguyên mẫu liên tục với từ ba lần thử trở lên; các lần thử liên hệ rõ ràng.'],
+    ['Quy trình thử nghiệm được xác định', 'Không ghi thử nghiệm, hoặc chỉ cho robot chạy mà không mô tả phép thử.', 'Có đề cập thử nghiệm nhưng không nêu nội dung được đo hoặc cách đo.', 'Nêu rõ nội dung được đo và cách đo.', 'Nêu rõ nội dung, cách và điều kiện đo để người khác có thể lặp lại thử nghiệm.'],
+    ['Dữ liệu được thu thập', 'Không ghi lại kết quả.', 'Kết quả chỉ được mô tả chung chung, không có số liệu đo lường.', 'Ghi kết quả định tính hoặc định lượng để dùng khi ra quyết định.', 'Ghi cả kết quả định tính và định lượng theo hình thức có thể dùng để ra quyết định dựa trên dữ liệu.'],
+    ['Quyết định được giải thích bằng minh chứng', 'Có thay đổi nhưng không cho biết lý do.', 'Quyết định xuất hiện nhưng có rất ít hoặc không có lập luận, minh chứng.', 'Nêu quyết định kèm lập luận và minh chứng, nhưng không cho biết ai tham gia.', 'Nêu quyết định, cách ra quyết định, người tham gia và minh chứng dẫn đến lựa chọn.']
+  ]},
+  { group: 'Quy trình thiết kế kỹ thuật – Tối ưu hóa', points: 12, rows: [
+    ['Cơ cấu được ghi lại', 'Không ghi lại giải pháp đã chế tạo.', 'Có hình ảnh nhưng không giải thích cơ cấu hoạt động như thế nào hoặc vì sao.', 'Bản phác thảo, hình ảnh hoặc CAD thể hiện giải pháp và có nhãn cơ bản.', 'Bản phác thảo, hình ảnh hoặc CAD thể hiện giải pháp; nhãn mô tả cách thức hoặc lý do tồn tại của bộ phận.'],
+    ['Mã lệnh được ghi lại', 'Không có tài liệu về mã lệnh.', 'Có mã lệnh nhưng rất ít hoặc không có giải thích.', 'Mã được ghi bằng mã giả, lưu đồ, ảnh chụp có chú thích hoặc mã có chú thích, kèm mục đích.', 'Tài liệu mã thể hiện cả mục đích và quá trình phát triển mã lệnh.'],
+    ['Các thay đổi có thể truy vết từ kết quả', 'Có thay đổi nhưng không có thử nghiệm làm căn cứ.', 'Có cả thay đổi và thử nghiệm nhưng hai nội dung không được liên kết.', 'Thay đổi xuất phát từ thử nghiệm, nhưng đôi khi mối liên hệ chỉ thể hiện gián tiếp.', 'Thay đổi robot hoặc mã lệnh xuất phát từ kết quả thử nghiệm đã ghi; mối liên hệ được nêu rõ.']
+  ]},
+  { group: 'Quy trình thiết kế kỹ thuật – Phản tư và Lặp lại', points: 8, rows: [
+    ['Phản tư xuất hiện xuyên suốt', 'Không có phản tư, hoặc chỉ ghi hoạt động mà không đánh giá.', 'Phản tư chỉ xuất hiện ở cuối hoặc là bản tổng kết chung.', 'Phản tư xuất hiện tại nhiều hơn một thời điểm trong mùa giải.', 'Phản tư liên tục trong mùa giải và kết quả phản tư định hướng các bước tiếp theo.'],
+    ['Có thể thấy quá trình lặp theo trình tự', 'Hầu như không hoặc hoàn toàn không thể hiện quá trình lặp.', 'Có một số lần lặp ở một lĩnh vực: chế tạo, chiến thuật hoặc lập trình.', 'Có quá trình lặp xuyên suốt mùa giải ở một hoặc hai lĩnh vực.', 'Có quá trình lặp liên tục suốt mùa giải, vận dụng quy trình thiết kế cho chế tạo, chiến thuật và lập trình.']
+  ]}
+];
+
+const INTERVIEW_RUBRIC = [
+  { group: 'Trình bày những điều đã học', prompts: 'Chọn một bộ phận robot hoặc đoạn mã và giải thích cách hoạt động; kể về một vấn đề cần nhiều lần thử; nêu cách đội biết giải pháp hoạt động.', rows: [
+    ['Học sinh giải thích công việc do chính mình thực hiện', 'Không thể trả lời, kể cả sau câu hỏi gợi mở.', 'Trả lời khái quát về cách robot, mã hoặc chiến thuật hoạt động.', 'Đưa ra chi tiết cụ thể về cách hoạt động, lý do thiết kế và phương án đã cân nhắc.'],
+    ['Học sinh trình bày quá trình đi đến giải pháp', 'Không thể trả lời, kể cả sau câu hỏi gợi mở.', 'Mô tả khái quát quá trình.', 'Mô tả các lần thử theo trình tự, điều không hiệu quả và bước tiếp theo hoặc thời điểm làm thay đổi suy nghĩ.'],
+    ['Học sinh chứng minh cách đội biết giải pháp hoạt động', 'Không thể trả lời, kể cả sau câu hỏi gợi mở.', 'Nêu khái quát rằng giải pháp hoạt động.', 'Nêu thử nghiệm, kết quả bằng số lần, thời gian hoặc số đo, và cách thử nghiệm dẫn đến thay đổi thiết kế.']
+  ]},
+  { group: 'Cách đội hợp tác với nhau', prompts: 'Hỏi ai phụ trách việc gì; một điều các em đã hướng dẫn đồng đội; cách xử lý bất đồng; nguồn gốc và cách điều chỉnh một ý tưởng bên ngoài.', rows: [
+    ['Học sinh học hỏi từ nhau và cùng nhau học tập', 'Không thể trả lời, kể cả sau câu hỏi gợi mở.', 'Trả lời khái quát về việc hợp tác.', 'Nêu chi tiết việc hướng dẫn kỹ năng, bổ sung câu trả lời hoặc thời điểm cả đội cùng đạt được sự thấu hiểu.'],
+    ['Các quyết định được đưa ra cùng nhau', 'Không thể trả lời, kể cả sau câu hỏi gợi mở.', 'Trả lời khái quát về quyết định của đội.', 'Nêu cách đi đến quyết định, một bất đồng và cách giải quyết; quyết định do học sinh đưa ra.'],
+    ['Đội biến ý tưởng bên ngoài thành giải pháp của riêng mình', 'Không thể trả lời, kể cả sau câu hỏi gợi mở.', 'Nêu ý tưởng bên ngoài ở mức khái quát.', 'Nêu nguồn ý tưởng, phần đã điều chỉnh, cách thử nghiệm trên robot và lý do giải pháp hoạt động.']
+  ]}
+];
+
 const DESIGN = [
   {
     id: 'strategy-fit', title: 'Phù hợp chiến thuật Override',
@@ -276,6 +318,16 @@ function renderJudging() {
 function renderSkills() {
   const team = TEAMS.find(t=>t.id===selectedSkillTeam); const d = state.teams[team.id];
   document.getElementById('skills').innerHTML = `<div class="section-head"><div><div class="eyebrow">Phòng 207 · Ban giám khảo Skills</div><h1>Robot Skills</h1><p>Mỗi đội có tối đa 3 lượt Autonomous và 3 lượt Driver; hệ thống lấy điểm cao nhất.</p></div></div>
+  <section class="skills-overview">
+    <figure class="skills-field"><img src="assets/images/robot-skill-field.jpg" alt="Sơ đồ bố trí sân Robot Skills V5RC Override nhìn từ trên cao"><figcaption>Bố trí sân Robot Skills theo Game Manual Override v2.0, quy tắc RSC4.</figcaption></figure>
+    <div class="skills-summary">
+      <div class="eyebrow">Section 3 · Tóm tắt nhanh</div><h2>Hai nội dung, mỗi lượt 60 giây</h2>
+      <p><b>Driving Skills</b> do học sinh điều khiển hoàn toàn; <b>Autonomous Coding Skills</b> chạy tự động với tương tác con người hạn chế. Xếp hạng chính thức dựa trên tổng điểm tốt nhất của hai nội dung.</p>
+      <div class="skills-score-grid"><div><b>5</b><span>điểm / Red hoặc Blue Pin hợp lệ</span></div><div><b>10</b><span>điểm / Yellow Pin được sở hữu</span></div><div><b>8</b><span>điểm khi robot kết thúc trong Midfield</span></div></div>
+      <ul class="skills-rules"><li>Robot xuất phát hợp lệ trong Quadrant cạnh Red Alliance Station; Drive Team ở Red Alliance Station.</li><li>Dùng một Red/Yellow Pin làm Preload. Match Loads chỉ được đưa vào qua Red Alliance Loaders.</li><li>Robot có thể thêm hoặc lấy Pins/Cups trên mọi Goal và di chuyển tự do sau khi bắt đầu.</li><li>Red/Blue Pin chỉ ghi điểm trong Quadrant cùng màu hoặc Midfield. Yellow Pin phải được sở hữu; ở Midfield, quyền sở hữu phụ thuộc vào việc robot kết thúc trong Midfield.</li><li>Vật ghi điểm rời sân không được đưa trở lại. Sân Skills bắt đầu với các Goal trống; Match Loads gồm 3 Red/Yellow Pins, 4 Blue/Yellow Pins và 7 Cups.</li></ul>
+      <div class="source-note"><b>Skills Stop Time:</b> đội phải đăng ký trước mỗi lượt và thống nhất tín hiệu dừng. Thời gian dừng chỉ dùng để phá hòa, không làm thay đổi điểm của lượt; nếu không đăng ký, thời gian mặc định là 0.</div>
+    </div>
+  </section>
   <div class="panel form-panel" style="margin-bottom:18px"><div class="field" style="max-width:430px;margin:0"><label for="skill-team">Đội đang thi · ${team.skills}</label><select id="skill-team">${TEAMS.map(t=>`<option value="${t.id}" ${t.id===team.id?'selected':''}>${t.name} — ${t.skills}</option>`).join('')}</select></div></div>
   <div class="skills-layout">
     ${skillCard('auto','Autonomous Skills','Robot tự hành',d.auto)}
@@ -290,10 +342,19 @@ function skillCard(mode,title,chip,values) {
 }
 
 function renderRubric() {
-  document.getElementById('rubric').innerHTML = `<div class="rubric-page"><div class="rubric-hero"><div class="eyebrow">Rubric nội bộ · 20 điểm</div><h1>Đánh giá Thiết kế robot</h1><p>Giám khảo chấm những gì học sinh có thể giải thích và chứng minh trên robot. Mỗi hàng chọn một mức từ 0 đến 4; tổng tối đa 20 điểm và được quy đổi trực tiếp thành 20% kết quả.</p></div>
-  <div class="panel rubric-table"><table><thead><tr><th>Tiêu chí</th><th class="level-4">4 · Xuất sắc</th><th class="level-3">3 · Thành thạo</th><th class="level-2">2 · Đang phát triển</th><th class="level-1">1 · Bắt đầu</th><th class="level-0">0 · Chưa thể hiện</th></tr></thead><tbody>
-  ${DESIGN.map(d=>`<tr><td>${d.title}</td><td>${d.levels[4]}</td><td>${d.levels[3]}</td><td>${d.levels[2]}</td><td>${d.levels[1]}</td><td>${d.levels[0]}</td></tr>`).join('')}</tbody></table></div>
+  document.getElementById('rubric').innerHTML = `<div class="rubric-page"><div class="rubric-hero"><div class="eyebrow">Bộ tiêu chí đánh giá</div><h1>Rubric cho ba nội dung</h1><p>Tra cứu đầy đủ tiêu chí Engineering Notebook, phỏng vấn đội và thiết kế robot. Nội dung hai rubric chính thức được chuyển từ bản tiếng Việt v2.0.</p><div class="rubric-jump"><a href="#notebook-rubric">Notebook · 64</a><a href="#interview-rubric">Phỏng vấn · 12</a><a href="#design-rubric">Thiết kế robot · 20</a></div></div>
+  <section id="notebook-rubric" class="rubric-section"><div class="section-head"><div><div class="eyebrow">Engineering Notebook · tối đa 64 điểm</div><h2>Tiêu chí đánh giá Engineering Notebook</h2><p>Mỗi tiêu chí chấm từ 1 đến 4. Năm nhóm lần lượt có trọng số tối đa 16, 12, 16, 12 và 8 điểm.</p></div></div>${NOTEBOOK_RUBRIC.map(g=>rubricGroupTable(g)).join('')}</section>
+  <section id="interview-rubric" class="rubric-section"><div class="section-head"><div><div class="eyebrow">Phỏng vấn đội · tối đa 12 điểm</div><h2>Tiêu chí chấm phỏng vấn đội</h2><p>Chọn 2–3 câu hỏi gợi ý cho mỗi nhóm. Không nhất thiết phải nghe thấy mọi ví dụ minh chứng.</p></div></div>${INTERVIEW_RUBRIC.map(g=>interviewGroupTable(g)).join('')}</section>
+  <section id="design-rubric" class="rubric-section"><div class="section-head"><div><div class="eyebrow">Rubric nội bộ · tối đa 20 điểm</div><h2>Đánh giá Thiết kế robot</h2><p>Chấm những gì học sinh có thể giải thích và chứng minh trên robot; mỗi hàng chọn mức 0–4.</p></div></div><div class="panel rubric-table"><table><thead><tr><th>Tiêu chí</th><th class="level-4">4 · Xuất sắc</th><th class="level-3">3 · Thành thạo</th><th class="level-2">2 · Đang phát triển</th><th class="level-1">1 · Bắt đầu</th><th class="level-0">0 · Chưa thể hiện</th></tr></thead><tbody>${DESIGN.map(d=>`<tr><td>${d.title}</td><td>${d.levels[4]}</td><td>${d.levels[3]}</td><td>${d.levels[2]}</td><td>${d.levels[1]}</td><td>${d.levels[0]}</td></tr>`).join('')}</tbody></table></div></section>
   <div class="section-head"><div><h2>Hướng dẫn sử dụng</h2></div></div><div class="panel form-panel"><p><b>Minh chứng ưu tiên:</b> quan sát robot, giải thích trực tiếp của học sinh, dữ liệu thử nghiệm và sự liên hệ với Engineering Notebook. Không chấm cao chỉ vì robot đẹp hoặc phức tạp.</p><p><b>Robot Inspection:</b> là điều kiện hợp lệ riêng, không cộng vào 20 điểm thiết kế. Đội chưa PASS cần hoàn tất thay đổi trước khi được chạy Skills.</p><p><b>Nguyên tắc:</b> nếu minh chứng nằm giữa hai mức, chọn mức thấp hơn và ghi điều còn thiếu trong phần nhận xét.</p></div></div>`;
+}
+
+function rubricGroupTable(group) {
+  return `<article class="rubric-block"><div class="rubric-block-head"><h3>${group.group}</h3><span>${group.points} điểm</span></div><div class="panel rubric-table"><table><thead><tr><th>Tiêu chí</th><th class="level-4">4 · Xuất sắc</th><th class="level-3">3 · Thành thạo</th><th class="level-2">2 · Đang phát triển</th><th class="level-1">1 · Bắt đầu</th></tr></thead><tbody>${group.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[4]}</td><td>${r[3]}</td><td>${r[2]}</td><td>${r[1]}</td></tr>`).join('')}</tbody></table></div></article>`;
+}
+
+function interviewGroupTable(group) {
+  return `<article class="rubric-block"><div class="rubric-block-head"><div><h3>${group.group}</h3><p><b>Câu hỏi gợi ý:</b> ${group.prompts}</p></div><span>${group.rows.length * 2} điểm</span></div><div class="panel rubric-table interview-table"><table><thead><tr><th>Tiêu chí và minh chứng cần lắng nghe</th><th class="level-4">2 · Có chi tiết</th><th class="level-2">1 · Khái quát</th><th class="level-0">0 · Chưa nghe thấy</th></tr></thead><tbody>${group.rows.map(r=>`<tr><td>${r[0]}</td><td>${r[3]}</td><td>${r[2]}</td><td>${r[1]}</td></tr>`).join('')}</tbody></table></div></article>`;
 }
 
 function renderGame() {
