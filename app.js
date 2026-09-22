@@ -296,6 +296,85 @@ function renderRubric() {
   <div class="section-head"><div><h2>Hướng dẫn sử dụng</h2></div></div><div class="panel form-panel"><p><b>Minh chứng ưu tiên:</b> quan sát robot, giải thích trực tiếp của học sinh, dữ liệu thử nghiệm và sự liên hệ với Engineering Notebook. Không chấm cao chỉ vì robot đẹp hoặc phức tạp.</p><p><b>Robot Inspection:</b> là điều kiện hợp lệ riêng, không cộng vào 20 điểm thiết kế. Đội chưa PASS cần hoàn tất thay đổi trước khi được chạy Skills.</p><p><b>Nguyên tắc:</b> nếu minh chứng nằm giữa hai mức, chọn mức thấp hơn và ghi điều còn thiếu trong phần nhận xét.</p></div></div>`;
 }
 
+function renderGuide() {
+  document.getElementById('guide').innerHTML = `
+    <div class="guide-hero">
+      <div class="eyebrow">Dành cho Ban giám khảo</div>
+      <h1>Hướng dẫn chấm và nhập điểm</h1>
+      <p>Thực hiện theo đúng phần việc của phòng mình. Mọi thay đổi được lưu trước trên thiết bị rồi đồng bộ lên Google Sheets.</p>
+    </div>
+    <div class="guide-grid">
+      <article class="guide-card wide">
+        <div class="guide-number">1</div>
+        <h3>Chuẩn bị trước khi chấm</h3>
+        <div class="connection-steps">
+          <div class="connection-step"><b>Kết nối dữ liệu</b><span>Bấm trạng thái ở góc trên bên phải, nhập URL Apps Script, API token và tên giám khảo hoặc phòng thi.</span></div>
+          <div class="connection-step"><b>Kiểm tra đồng bộ</b><span>Vào Tổng quan, bấm “Đồng bộ ngay”. Chỉ bắt đầu khi trạng thái hiển thị “Đã đồng bộ”.</span></div>
+          <div class="connection-step"><b>Đúng thiết bị</b><span>Dùng trình duyệt thông thường, không dùng cửa sổ ẩn danh. Giữ nguyên một trình duyệt trong suốt buổi thi.</span></div>
+        </div>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-number">2</div>
+        <h3>Phòng 228 · Phỏng vấn và Robot</h3>
+        <ol>
+          <li>Mở <strong>Phỏng vấn & Robot</strong> và chọn đúng đội theo lịch.</li>
+          <li>Nhập tên giám khảo hoặc tên nhóm giám khảo.</li>
+          <li>Chấm đủ 6 tiêu chí phỏng vấn, mỗi tiêu chí 0–2 điểm.</li>
+          <li>Chấm đủ 5 tiêu chí thiết kế robot, mỗi tiêu chí 0–4 điểm.</li>
+          <li>Ghi nhận xét bằng minh chứng cụ thể từ câu trả lời, robot hoặc dữ liệu thử nghiệm.</li>
+          <li>Kiểm tra đủ 11/11 tiêu chí rồi bấm <strong>Hoàn tất phiếu</strong>.</li>
+        </ol>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-number">3</div>
+        <h3>Phòng 207 · Robot Skills</h3>
+        <ol>
+          <li>Mở <strong>Robot Skills</strong> và chọn đúng đội theo khung giờ.</li>
+          <li>Nhập điểm từng lượt Autonomous vào đúng ô.</li>
+          <li>Nhập điểm từng lượt Driver vào đúng ô.</li>
+          <li>Nhập <strong>0</strong> nếu lượt hợp lệ nhưng không ghi được điểm.</li>
+          <li>Để trống lượt không diễn ra hoặc bị hủy; ghi vào biên bản vận hành nếu cần.</li>
+          <li>Hệ thống tự lấy điểm cao nhất trong tối đa 3 lượt của mỗi nội dung.</li>
+        </ol>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-number">4</div>
+        <h3>Nguyên tắc chấm</h3>
+        <ul>
+          <li>Chỉ chấm những gì học sinh <strong>giải thích hoặc chứng minh được</strong>.</li>
+          <li>Nếu minh chứng nằm giữa hai mức, chọn mức thấp hơn và ghi phần còn thiếu.</li>
+          <li>Robot Inspection là điều kiện hợp lệ riêng, không cộng vào điểm thiết kế robot.</li>
+          <li>Không xem bảng xếp hạng tạm thời để điều chỉnh điểm đã chấm.</li>
+          <li>Không chia sẻ nhận xét hoặc điểm chi tiết ra ngoài Ban giám khảo.</li>
+        </ul>
+      </article>
+
+      <article class="guide-card">
+        <div class="guide-number">5</div>
+        <h3>Khi mất mạng hoặc lỗi đồng bộ</h3>
+        <ol>
+          <li>Tiếp tục nhập điểm; dữ liệu vẫn được lưu trên thiết bị.</li>
+          <li>Không tải lại trang liên tục và không đổi sang trình duyệt khác.</li>
+          <li>Khi mạng trở lại, bấm <strong>Đồng bộ ngay</strong>.</li>
+          <li>Nếu vẫn báo lỗi, ghi lại đội và điểm trên giấy, rồi báo người phụ trách hệ thống.</li>
+          <li>Không bấm “Xóa dữ liệu thử” trong thời gian thi.</li>
+        </ol>
+      </article>
+
+      <article class="guide-card wide">
+        <div class="guide-number">6</div>
+        <h3>Kiểm tra trước khi kết thúc</h3>
+        <div class="do-dont">
+          <div class="do-list"><h3>Nên làm</h3><ul><li>Đối chiếu tên đội và khung giờ.</li><li>Chấm đủ mọi tiêu chí.</li><li>Ghi nhận xét ngắn nhưng có minh chứng.</li><li>Xác nhận trạng thái “Đã đồng bộ”.</li><li>Báo người phụ trách nếu cần mở lại phiếu.</li></ul></div>
+          <div class="dont-list"><h3>Không nên làm</h3><ul><li>Chấm thay cho phòng khác.</li><li>Dùng nút quay lại để đổi dữ liệu.</li><li>Chia sẻ API token.</li><li>Xóa dữ liệu hoặc xóa lịch sử trình duyệt.</li><li>Cho học sinh xem điểm hay bảng xếp hạng tạm thời.</li></ul></div>
+        </div>
+      </article>
+    </div>`;
+}
+
 function bindOverview() {
   document.querySelectorAll('[data-notebook]').forEach(input=>input.addEventListener('change',e=>{
     const id=e.target.dataset.notebook; state.teams[id].notebook=Math.min(64,Math.max(0,Number(e.target.value||0))); saveState('Đã lưu Notebook', id, 'notebook'); renderOverview();
@@ -329,7 +408,7 @@ function exportJson(){download('vex-override-backup.json',JSON.stringify({export
 function download(name,content,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 function escapeHtml(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 
-function renderAll(){renderOverview();renderJudging();renderSkills();renderRubric()}
+function renderAll(){renderOverview();renderJudging();renderSkills();renderRubric();renderGuide()}
 document.addEventListener('click',e=>{const btn=e.target.closest('[data-view]');if(btn)switchView(btn.dataset.view)});
 renderAll();
 document.getElementById('syncConfig').onclick = configureSync;
