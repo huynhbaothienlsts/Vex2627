@@ -169,6 +169,18 @@ textarea { min-height: 100px; resize: vertical; }
 .guide-card ol, .guide-card ul { margin: 10px 0 0; padding-left: 21px; color: #4f5868; line-height: 1.6; }
 .guide-card li + li { margin-top: 7px; }
 .guide-card strong { color: var(--ink); }
+.scoring-guide { overflow: hidden; }
+.scoring-guide-head { margin: 0 0 18px; }
+.scoring-guide-head p { max-width: 760px; }
+.weight-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 10px; }
+.weight-card { position: relative; padding: 17px 15px; border: 1px solid var(--line); border-radius: 14px; background: #f8fafc; }
+.weight-card > span { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; color: white; background: var(--coral); font-size: 11px; font-weight: 900; }
+.weight-card h4 { min-height: 38px; margin: 12px 0 8px; font-size: 14px; }
+.weight-card b { display: block; color: #164f8c; font-size: 12px; line-height: 1.45; }
+.weight-card p { margin: 8px 0 0; font-size: 11px; line-height: 1.45; }
+.score-total-formula { display: flex; align-items: center; gap: 16px; margin-top: 14px; padding: 15px 18px; color: white; background: var(--navy); border-radius: 13px; }
+.score-total-formula b { color: white; white-space: nowrap; }
+.score-total-formula span { color: #d5dce8; font-size: 13px; }
 .do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
 .do-list, .dont-list { border-radius: 13px; padding: 17px; }
 .do-list { background: var(--soft-green); color: #0b684c; }
@@ -231,6 +243,7 @@ textarea { min-height: 100px; resize: vertical; }
   .rule-grid { grid-template-columns: repeat(2,1fr); }
   .metric-grid { grid-template-columns: repeat(2,1fr); }
   .connection-steps { grid-template-columns: 1fr; }
+  .weight-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .grid-2 { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   .rubric-row { grid-template-columns: 1fr; gap: 8px; }
@@ -246,6 +259,9 @@ textarea { min-height: 100px; resize: vertical; }
   .hero { padding: 26px 22px; border-radius: 18px; }
   .hero-stats, .metric-grid, .skills-layout, .admin-grid, .guide-grid, .do-dont { grid-template-columns: 1fr; }
   .guide-card.wide { grid-column: auto; }
+  .weight-grid { grid-template-columns: 1fr; }
+  .weight-card h4 { min-height: 0; }
+  .score-total-formula { align-items: flex-start; flex-direction: column; gap: 5px; }
   .game-hero-copy { padding: 28px 22px; }
   .game-hero-art { min-height: 240px; }
   .score-strip, .rule-grid, .fact-list { grid-template-columns: 1fr; }

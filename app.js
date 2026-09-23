@@ -429,6 +429,20 @@ function renderGuide() {
         </div>
       </article>
 
+      <article class="guide-card wide scoring-guide">
+        <div class="guide-number">100</div>
+        <div class="section-head scoring-guide-head"><div><div class="eyebrow">5 tiêu chí · mỗi tiêu chí 20%</div><h3>Cách tính điểm thi vòng trường</h3><p>Mỗi đội có thể đạt tối đa 100 điểm. Năm nội dung có trọng số bằng nhau, vì vậy một nội dung tốt không thể hoàn toàn bù cho một nội dung còn thiếu.</p></div><div class="total-badge"><b>100</b><small>điểm tối đa</small></div></div>
+        <div class="weight-grid">
+          <div class="weight-card"><span>01</span><h4>Engineering Notebook</h4><b>Điểm gốc ÷ 64 × 20</b><p>Ví dụ: 48/64 được 15/20 điểm.</p></div>
+          <div class="weight-card"><span>02</span><h4>Phỏng vấn đội</h4><b>Điểm gốc ÷ 12 × 20</b><p>Ví dụ: 9/12 được 15/20 điểm.</p></div>
+          <div class="weight-card"><span>03</span><h4>Thiết kế robot</h4><b>Giữ nguyên điểm /20</b><p>Năm tiêu chí, mỗi tiêu chí tối đa 4 điểm.</p></div>
+          <div class="weight-card"><span>04</span><h4>Autonomous Skills</h4><b>Điểm tốt nhất ÷ điểm dẫn đầu × 20</b><p>Lấy lượt cao nhất trong tối đa 3 lượt rồi so với đội dẫn đầu Autonomous.</p></div>
+          <div class="weight-card"><span>05</span><h4>Driver Skills</h4><b>Điểm tốt nhất ÷ điểm dẫn đầu × 20</b><p>Lấy lượt cao nhất trong tối đa 3 lượt rồi so với đội dẫn đầu Driver.</p></div>
+        </div>
+        <div class="score-total-formula"><b>Tổng điểm /100</b><span>= Notebook + Phỏng vấn + Thiết kế robot + Autonomous + Driver</span></div>
+        <div class="source-note"><b>Xếp hạng:</b> chọn 5 đội có tổng điểm cao nhất. Nếu bằng điểm, lần lượt so sánh Autonomous đã quy đổi, Driver đã quy đổi, Phỏng vấn đã quy đổi, rồi tên đội.</div>
+      </article>
+
       <article class="guide-card">
         <div class="guide-number">2</div>
         <h3>Phòng 228 · Phỏng vấn và Robot</h3>
