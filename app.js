@@ -440,7 +440,7 @@ function renderGuide() {
           <div class="weight-card"><span>05</span><h4>Driver Skills</h4><b>Điểm tốt nhất ÷ điểm dẫn đầu × 20</b><p>Lấy lượt cao nhất trong tối đa 3 lượt rồi so với đội dẫn đầu Driver.</p></div>
         </div>
         <div class="score-total-formula"><b>Tổng điểm /100</b><span>= Notebook + Phỏng vấn + Thiết kế robot + Autonomous + Driver</span></div>
-        <div class="source-note"><b>Xếp hạng:</b> chọn 5 đội có tổng điểm cao nhất. Nếu bằng điểm, lần lượt so sánh Autonomous đã quy đổi, Driver đã quy đổi, Phỏng vấn đã quy đổi, rồi tên đội.</div>
+        <div class="source-note"><b>Xếp hạng:</b> chọn 5 đội có tổng điểm cao nhất. Nếu bằng điểm, lần lượt so sánh Autonomous đã quy đổi, Driver đã quy đổi và Phỏng vấn đã quy đổi.</div>
       </article>
 
       <article class="guide-card">
