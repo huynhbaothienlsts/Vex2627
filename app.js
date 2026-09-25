@@ -5,7 +5,7 @@ const TEAMS = [
   { id: 'vertex', name: 'LSTS Vertex', division: 'High School', interview: '15:10–15:20', skills: '16:10–16:20' },
   { id: 'curiosity', name: 'LSTS Curiosity', division: 'Middle School', interview: '15:20–15:30', skills: '15:40–15:50' },
   { id: 'peak', name: 'LSTS Peak', division: 'Middle School', interview: '15:30–15:40', skills: '15:50–16:00' },
-  { id: 'noname', name: 'LSTS Noname', division: 'Middle School', interview: '15:40–15:50', skills: '15:20–15:30' },
+  { id: 'noname', name: 'LSTS Simple', division: 'Middle School', interview: '15:40–15:50', skills: '15:20–15:30' },
   { id: 'flying-fish', name: 'LSTS Flying Fish', division: 'Middle School', interview: '15:50–16:00', skills: '15:30–15:40' }
 ];
 
