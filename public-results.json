@@ -1,0 +1,16 @@
+{
+  "event": "VEX V5RC Override 2026–2027",
+  "round": "Vòng tuyển chọn cấp trường",
+  "publishedAt": "28/09/2026 15:34",
+  "selectedCount": 5,
+  "teams": [
+    { "id": "singularity", "name": "LSTS Singularity", "division": "High School", "rank": 1, "notebook": 15.94, "interview": 16.67, "design": 18, "autonomous": 20, "driver": 20, "total": 90.60, "selected": true },
+    { "id": "curiosity", "name": "LSTS Curiosity", "division": "Middle School", "rank": 2, "notebook": 17.81, "interview": 16.67, "design": 16, "autonomous": 9.47, "driver": 9.66, "total": 69.61, "selected": true },
+    { "id": "vertex", "name": "LSTS Vertex", "division": "High School", "rank": 3, "notebook": 16.56, "interview": 16.67, "design": 18, "autonomous": 4.21, "driver": 13.10, "total": 68.54, "selected": true },
+    { "id": "nexus", "name": "LSTS Nexus", "division": "Middle School", "rank": 4, "notebook": 16.56, "interview": 13.33, "design": 15, "autonomous": 4.21, "driver": 16.55, "total": 65.66, "selected": true },
+    { "id": "peak", "name": "LSTS Peak", "division": "Middle School", "rank": 5, "notebook": 17.81, "interview": 15, "design": 15, "autonomous": 4.21, "driver": 9.66, "total": 61.68, "selected": true },
+    { "id": "spark", "name": "LSTS Spark", "division": "Middle School", "rank": 6, "notebook": 17.19, "interview": 10, "design": 10, "autonomous": 4.21, "driver": 9.66, "total": 51.05, "selected": false },
+    { "id": "flying-fish", "name": "LSTS Flying Fish", "division": "Middle School", "rank": 7, "notebook": 10.63, "interview": 8.33, "design": 3, "autonomous": 0, "driver": 0, "total": 21.96, "selected": false },
+    { "id": "simple", "name": "LSTS Simple", "division": "Middle School", "rank": 8, "notebook": 7.19, "interview": 5, "design": 6, "autonomous": 0, "driver": 2.76, "total": 20.95, "selected": false }
+  ]
+}

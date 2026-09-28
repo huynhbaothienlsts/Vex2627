@@ -3,38 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#111827" />
-  <title>VEX Override Selection 2026–2027</title>
-  <meta name="description" content="Bản thử nghiệm chấm tuyển V5RC Override vòng trường" />
+  <meta name="theme-color" content="#172033" />
+  <title>Kết quả VEX Override 2026–2027</title>
+  <meta name="description" content="Kết quả vòng tuyển chọn cấp trường VEX V5RC Override 2026–2027" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <button class="brand" data-view="overview" aria-label="Về trang tổng quan">
+    <button class="brand" data-view="results" aria-label="Về trang kết quả">
       <span class="brand-mark"><img src="assets/images/lsts-logo.png" alt="LSTS"></span>
-      <span><strong>VEX OVERRIDE</strong><small>Vòng tuyển cấp trường 2026–2027</small></span>
+      <span><strong>VEX OVERRIDE</strong><small>Kết quả vòng tuyển chọn cấp trường</small></span>
     </button>
     <nav aria-label="Điều hướng chính">
-      <button class="nav-btn active" data-view="overview">Tổng quan</button>
-      <button class="nav-btn" data-view="judging">Phỏng vấn & Robot</button>
-      <button class="nav-btn" data-view="skills">Robot Skills</button>
-      <button class="nav-btn" data-view="game">Luật game</button>
-      <button class="nav-btn" data-view="rubric">Rubric</button>
-      <button class="nav-btn" data-view="guide">Hướng dẫn</button>
+      <button class="nav-btn active" data-view="results">Kết quả</button>
+      <button class="nav-btn" data-view="team">Xem từng đội</button>
+      <button class="nav-btn" data-view="method">Cách tính điểm</button>
     </nav>
-    <button class="session-pill" id="syncConfig" type="button" title="Cấu hình Google Apps Script"><span class="live-dot"></span><span id="saveStatus">Chưa kết nối Google Sheets</span></button>
+    <span class="public-pill"><span class="live-dot"></span>Kết quả chính thức</span>
   </header>
-
   <main>
-    <section id="overview" class="view active"></section>
-    <section id="judging" class="view"></section>
-    <section id="skills" class="view"></section>
-    <section id="game" class="view"></section>
-    <section id="rubric" class="view"></section>
-    <section id="guide" class="view"></section>
+    <section id="results" class="view active"></section>
+    <section id="team" class="view"></section>
+    <section id="method" class="view"></section>
   </main>
-
-  <div id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
 </body>
 </html>
